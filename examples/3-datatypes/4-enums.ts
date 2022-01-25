@@ -6,16 +6,20 @@
 // const ADMIN = 0;
 // const READ_ONLY = 1;
 // const AUTHOR = 2;
-enum Role { ADMIN, READ_ONLY, AUTHOR }
+enum Role {
+  ADMIN,
+  READ_ONLY,
+  AUTHOR,
+}
 const person = {
-    name: 'Nicolas',
-    age: 27,
-    hobbies: ['Sports', 'Cooking'], // hobbies: string[]
-    role: Role.ADMIN
+  name: "Nicolas",
+  age: 27,
+  hobbies: ["Sports", "Cooking"], // hobbies: string[]
+  role: Role.ADMIN,
 };
 
-console.log(person)
+console.log(person);
 
-person.role = Role.READ_ONLY
+person.role = Role.READ_ONLY;
 
-console.log(person)
+console.log(person);
