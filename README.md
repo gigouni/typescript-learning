@@ -5,6 +5,7 @@ TypeScript tutorials, self-taught learning, ...
 <!-- TOC -->
 
 - [1. TypeScript Learning](#1-typescript-learning)
+    - [How to run examples](#how-to-run-examples)
     - [1.1. What is TypeScript](#11-what-is-typescript)
     - [1.2. Installing and using TypeScript](#12-installing-and-using-typescript)
     - [1.3. IDE](#13-ide)
@@ -17,6 +18,22 @@ TypeScript tutorials, self-taught learning, ...
 <!-- /TOC -->
 
 TypeScript Course for Beginners 2021: https://www.youtube.com/watch?v=BwuLxPH8IDs
+
+## How to run examples
+
+tl;dr
+
+```shell
+# In a first shell
+npm install   # install the dependencies
+npm start     # start the local server with live reload (open a new browser tab)
+
+# In another shell
+# Found the example you want to try and copy/paste its content into app.ts
+tsc app.ts
+
+# The browser shows the result (you may need to open your dev console (F12))!
+```
 
 ## 1.1. What is TypeScript
 
