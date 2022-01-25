@@ -16,7 +16,7 @@ TypeScript tutorials, self-taught learning, ...
 
 <!-- /TOC -->
 
-Online resource: https://www.youtube.com/watch?v=BwuLxPH8IDs
+TypeScript Course for Beginners 2021: https://www.youtube.com/watch?v=BwuLxPH8IDs
 
 ## 1.1. What is TypeScript
 
@@ -86,13 +86,12 @@ Run the Lite server
 npm start
 ```
 
-Now, you just jave to compile the `.ts` files to see the result into your browser without refreshing the page
+Now, you just have to compile the `.ts` files to see the result into your browser without refreshing the page
 
 ## 1.5. Types
 
 ### 1.5.1. Core types
 
-- Core datatypes from JavaScript + TypeScript datatypes + custom datatypes
 - `number`: integers, floats, negative integers (1, 5.3, -10)
 - `string`: text values ('Hi', "Hi", `Hi`)
 - `boolean`: true or false, no "truthy"/"falsy" values like 0
@@ -111,7 +110,7 @@ TypeScript does not need to get the type of a const when setting it, the "TypeSc
 ```typescript
 const number1 = 5; // 5 is a number so number1 is a number constant
 const myStr = 'hello world'; // 'hello-world' is a string so myStr is a string constant
-const isReady = true; // true is a string so myStr is a boolean constant
+const isReady = true; // true is a boolean so isReady is a boolean constant
 ```
 
 Datatype shoudn't be added if the value is set but it could if we don't initialize it immediatly
@@ -123,7 +122,7 @@ let number1;
 // Better
 let number1: number;
 
-// Wrong: break the infered type: Type "5" is not assignable to "number"
+// Wrong: break the infered type: Type "'5'" is not assignable to "number"
 let number2: number;
 number2 = '5';
 ```
@@ -131,4 +130,4 @@ number2 = '5';
 ## 1.6. Troubleshooting tips
 
 - `Duplicate function implementation ts(2393)` warning from the IDE: the filename.ts and filename.js are both open, close the filename.js file tab
-- `Type "5" is not assignable to "number"` error means we're breaking the infered type of a constant/variable
+- `Type "'5'" is not assignable to "number"` error means we're breaking the infered type of a constant/variable
