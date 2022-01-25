@@ -5,21 +5,25 @@ TypeScript tutorials, self-taught learning, ...
 <!-- TOC -->
 
 - [1. TypeScript Learning](#1-typescript-learning)
-    - [How to run examples](#how-to-run-examples)
-    - [1.1. What is TypeScript](#11-what-is-typescript)
-    - [1.2. Installing and using TypeScript](#12-installing-and-using-typescript)
-    - [1.3. IDE](#13-ide)
-    - [1.4. Lite-server](#14-lite-server)
-    - [1.5. Types](#15-types)
-        - [1.5.1. Core types](#151-core-types)
-        - [1.5.2. Type inference](#152-type-inference)
-    - [1.6. Troubleshooting tips](#16-troubleshooting-tips)
+    - [1.1. How to run examples](#11-how-to-run-examples)
+    - [1.2. What is TypeScript](#12-what-is-typescript)
+    - [1.3. Installing and using TypeScript](#13-installing-and-using-typescript)
+    - [1.4. IDE](#14-ide)
+    - [1.5. Lite-server](#15-lite-server)
+    - [1.6. Types](#16-types)
+        - [1.6.1. Core types](#161-core-types)
+        - [1.6.2. Type inference](#162-type-inference)
+    - [1.7. Troubleshooting datatypes](#17-troubleshooting-datatypes)
+    - [1.8. Configuring the Typescript compiler](#18-configuring-the-typescript-compiler)
+        - [1.8.1. Watch](#181-watch)
+        - [1.8.2. Several files to watch/compile](#182-several-files-to-watchcompile)
+        - [1.8.3. Sourcemaps](#183-sourcemaps)
 
 <!-- /TOC -->
 
 TypeScript Course for Beginners 2021: https://www.youtube.com/watch?v=BwuLxPH8IDs
 
-## How to run examples
+## 1.1. How to run examples
 
 tl;dr
 
@@ -30,12 +34,12 @@ npm start     # start the local server with live reload (open a new browser tab)
 
 # In another shell
 # Found the example you want to try and copy/paste its content into app.ts
-tsc app.ts
+npm run compile:watch
 
 # The browser shows the result (you may need to open your dev console (F12))!
 ```
 
-## 1.1. What is TypeScript
+## 1.2. What is TypeScript
 
 - Youtube timecode: [https://youtu.be/BwuLxPH8IDs?t=118](https://youtu.be/BwuLxPH8IDs?t=118)
 - TypeScript = JavaScript superset
@@ -45,7 +49,7 @@ tsc app.ts
 - JavaScript uses "dynamic types", TypeScript uses "static types"
 - TypeScript helps during development while JavaScript checks should help during runtime
 
-## 1.2. Installing and using TypeScript
+## 1.3. Installing and using TypeScript
 
 - Youtube timecode: [https://youtu.be/BwuLxPH8IDs?t=391](https://youtu.be/BwuLxPH8IDs?t=391)
 - Official website: [TypeScript - Download TypeScript](https://www.TypeScriptlang.org/download)
@@ -71,7 +75,7 @@ tsc using-ts.ts
   - ruch configuration options
   - modern tooling that helps even in non-TypeScript projects
 
-## 1.3. IDE
+## 1.4. IDE
 
 - Visual Studio Code: [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 - Extensions:
@@ -79,7 +83,7 @@ tsc using-ts.ts
   - Path intellisense: christian-kohler.path-intellisense
   - Prettier: esbenp.prettier-vscode
 
-## 1.4. Lite-server
+## 1.5. Lite-server
 
 Allow live reload of the `.js` files
 
@@ -105,9 +109,9 @@ npm start
 
 Now, you just have to compile the `.ts` files to see the result into your browser without refreshing the page
 
-## 1.5. Types
+## 1.6. Types
 
-### 1.5.1. Core types
+### 1.6.1. Core types
 
 - `number`: integers, floats, negative integers (1, 5.3, -10)
 - `string`: text values ('Hi', "Hi", `Hi`)
@@ -117,16 +121,16 @@ Now, you just have to compile the `.ts` files to see the result into your browse
 - `Tuple`: [1, 2], JavaScript array with fixed-length and fixed-type
   - When you know the exact length of an array and the exact datatype in advance then you might want to consider a tuple of an array to get even more strictness into your app
 - `Enum`: enum {NEW, OLD}, automatically enumerated global constant identifiers (_can be [upper/lower]case_)
-- `Any`: *, any kind of value, no specific type assignment (__avoid Any whenever possible__)
+- `Any`: \*, any kind of value, no specific type assignment (**avoid Any whenever possible**)
   - The compiler can't check anything, the `Any` datatype takes away all advantages TypeScript gives you
 
-### 1.5.2. Type inference
+### 1.6.2. Type inference
 
 TypeScript does not need to get the type of a const when setting it, the "TypeScript type inference" feature will understand which type is a certain variable, constant.
 
 ```typescript
 const number1 = 5; // 5 is a number so number1 is a number constant
-const myStr = 'hello world'; // 'hello-world' is a string so myStr is a string constant
+const myStr = "hello world"; // 'hello-world' is a string so myStr is a string constant
 const isReady = true; // true is a boolean so isReady is a boolean constant
 ```
 
@@ -141,10 +145,44 @@ let number1: number;
 
 // Wrong: break the infered type: Type "'5'" is not assignable to "number"
 let number2: number;
-number2 = '5';
+number2 = "5";
 ```
 
-## 1.6. Troubleshooting tips
+## 1.7. Troubleshooting datatypes
 
 - `Duplicate function implementation ts(2393)` warning from the IDE: the filename.ts and filename.js are both open, close the filename.js file tab
 - `Type "'5'" is not assignable to "number"` error means we're breaking the infered type of a constant/variable
+
+## 1.8. Configuring the Typescript compiler
+
+### 1.8.1. Watch
+
+To prevent running manually the compiler after each file change, use the `--watch` flag
+
+```shell
+tsc app.ts --watch
+```
+
+### 1.8.2. Several files to watch/compile
+
+If you have several files to watch and compile, init a Typescript config file
+
+```shell
+tsc --init
+```
+
+### 1.8.3. Sourcemaps
+
+Sourcemaps allow to "map" the `*.ts` files to their `*.js` dist file. It improves debugging on important project by allowing to debug `*.ts` files directly into the dev console's debugger.
+
+In the `tsconfig.json` file, enable the "sourceMap" option
+
+```json
+{
+  "compilerOptions": {
+    // ...
+    "sourceMap": true /* Create source map files for emitted JavaScript files. */
+    // ...
+  }
+}
+```
