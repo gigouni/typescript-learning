@@ -18,6 +18,9 @@ TypeScript tutorials, self-taught learning, ...
         - [1.8.1. Watch](#181-watch)
         - [1.8.2. Several files to watch/compile](#182-several-files-to-watchcompile)
         - [1.8.3. Sourcemaps](#183-sourcemaps)
+    - [Next gen Javascript](#next-gen-javascript)
+    - [Classes and Interfaces](#classes-and-interfaces)
+        - [Object-oriented Programming](#object-oriented-programming)
 
 <!-- /TOC -->
 
@@ -186,3 +189,22 @@ In the `tsconfig.json` file, enable the "sourceMap" option
   }
 }
 ```
+
+## Next gen Javascript
+
+Resources:
+
+- [ECMAScript 6 compatibility table](https://kangax.github.io/compat-table/es6/)
+
+## Classes and Interfaces
+
+### Object-oriented Programming
+
+- Objects
+  - The things you work with in code
+  - **Instances** of classes (= based on classes)
+  - Class-based creation is an alternative to using object literals
+- Classes
+  - Blueprints for objects (theoretical definition)
+  - Define how objects look like, which properties and methods they have
+  - Classes make creation of multiple, similar objects much easier

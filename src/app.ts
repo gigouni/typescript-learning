@@ -1,2 +1,2 @@
 // Your code goes here...
-console.log('From the app file')
+console.log("From the app file");
