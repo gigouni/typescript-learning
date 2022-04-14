@@ -13,14 +13,18 @@ TypeScript tutorials, self-taught learning, ...
     - [1.6. Types](#16-types)
         - [1.6.1. Core types](#161-core-types)
         - [1.6.2. Type inference](#162-type-inference)
-    - [1.7. Troubleshooting datatypes](#17-troubleshooting-datatypes)
+    - [1.7. Troubleshooting data types](#17-troubleshooting-data-types)
     - [1.8. Configuring the Typescript compiler](#18-configuring-the-typescript-compiler)
         - [1.8.1. Watch](#181-watch)
         - [1.8.2. Several files to watch/compile](#182-several-files-to-watchcompile)
         - [1.8.3. Sourcemaps](#183-sourcemaps)
-    - [Next gen Javascript](#next-gen-javascript)
-    - [Classes and Interfaces](#classes-and-interfaces)
-        - [Object-oriented Programming](#object-oriented-programming)
+    - [1.9. Next gen Javascript](#19-next-gen-javascript)
+    - [1.10. Classes and interfaces](#110-classes-and-interfaces)
+        - [1.10.1. Object-oriented Programming](#1101-object-oriented-programming)
+        - [1.10.2. Access modifiers](#1102-access-modifiers)
+        - [1.10.3. Keywords](#1103-keywords)
+        - [1.10.4. Interfaces](#1104-interfaces)
+            - [1.10.4.1. Why](#11041-why)
 
 <!-- /TOC -->
 
@@ -73,9 +77,9 @@ tsc using-ts.ts
 - TypeScript add
   - types
   - next-gen JavaScript features (compiled down for older platforms/browsers)
-  - non-JavaScript features like Interfaces or Generic
+  - non-JavaScript features like interfaces or generic
   - meta-programming features like decorators
-  - ruch configuration options
+  - much configuration options
   - modern tooling that helps even in non-TypeScript projects
 
 ## 1.4. IDE
@@ -137,7 +141,7 @@ const myStr = "hello world"; // 'hello-world' is a string so myStr is a string c
 const isReady = true; // true is a boolean so isReady is a boolean constant
 ```
 
-Datatype shoudn't be added if the value is set but it could if we don't initialize it immediatly
+Datatype shouldn't be added if the value is set but it could if we don't initialize it immediately
 
 ```typescript
 // Correct
@@ -146,15 +150,15 @@ let number1;
 // Better
 let number1: number;
 
-// Wrong: break the infered type: Type "'5'" is not assignable to "number"
+// Wrong: break the inferred type: Type "'5'" is not assignable to "number"
 let number2: number;
 number2 = "5";
 ```
 
-## 1.7. Troubleshooting datatypes
+## 1.7. Troubleshooting data types
 
 - `Duplicate function implementation ts(2393)` warning from the IDE: the filename.ts and filename.js are both open, close the filename.js file tab
-- `Type "'5'" is not assignable to "number"` error means we're breaking the infered type of a constant/variable
+- `Type "'5'" is not assignable to "number"` error means we're breaking the inferred type of a constant/variable
 
 ## 1.8. Configuring the Typescript compiler
 
@@ -190,21 +194,58 @@ In the `tsconfig.json` file, enable the "sourceMap" option
 }
 ```
 
-## Next gen Javascript
+## 1.9. Next gen Javascript
 
 Resources:
 
 - [ECMAScript 6 compatibility table](https://kangax.github.io/compat-table/es6/)
 
-## Classes and Interfaces
+## 1.10. Classes and interfaces
 
-### Object-oriented Programming
+### 1.10.1. Object-oriented Programming
 
-- Objects
+- **Objects**
   - The things you work with in code
   - **Instances** of classes (= based on classes)
   - Class-based creation is an alternative to using object literals
-- Classes
+- **Classes**
   - Blueprints for objects (theoretical definition)
   - Define how objects look like, which properties and methods they have
   - Classes make creation of multiple, similar objects much easier
+
+### 1.10.2. Access modifiers
+
+Access modifiers can be used for properties and methods and set the accessibility of resources by other classes.
+
+- **public**
+  - Default access modifier
+  - Accessible from any other classes
+- **private**
+  - Accessible only by the current class
+  - Not accessible by the inheriting classes
+- **protected**
+  - Accessible by the current class and its inheriting classes _only_
+
+### 1.10.3. Keywords
+
+- **static**
+  - Property or method which can be used without instantiate an instance of the class
+- **abstract**
+  - Force inheriting classes to implement the property or method to specialized its behavior
+- **readonly**
+  - Prevent the property to be mutate after its initialization
+
+### 1.10.4. Interfaces
+
+Interfaces are almost the same that the custom types usage but the interfaces leads to a clearer readability.
+An interface can **implements** and **extends** several interfaces while classes can only extends one another class.
+
+A major difference between interfaces and abstract classes is that interfaces do not implement methods, it only
+provide the signatures.
+
+Interfaces can't be instantiated and are not compiled.
+Using union types or arbitrary types are not a valid use-case for interfaces.
+
+#### 1.10.4.1. Why
+
+We want to insure that a class has a set of methods and we want TypeScript to check methods existence.
