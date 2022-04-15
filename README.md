@@ -27,6 +27,9 @@ TypeScript tutorials, self-taught learning, ...
             - [1.10.4.1. Why](#11041-why)
     - [1.11. Generics](#111-generics)
         - [1.11.1. Constraints](#1111-constraints)
+    - [Decorators](#decorators)
+        - [Factory decorators](#factory-decorators)
+        - [Validators](#validators)
 
 <!-- /TOC -->
 
@@ -266,3 +269,21 @@ Utility types documentation: [https://www.typescriptlang.org/docs/handbook/utili
 
 While being flexible, Generics could also integrates Javascript silent errors and generate unexpected behavior.
 Check the [working Generics constraints example](./examples/8-generics/3-working-with-constraints.ts)
+
+## Decorators
+
+> A Decorator is a special kind of declaration that can be attached to a class declaration, method, accessor, property, or parameter. Decorators use the form @expression, where expression must evaluate to a function that will be called at runtime with information about the decorated declaration.
+
+[Source](https://www.typescriptlang.org/docs/handbook/decorators.html#decorators)
+
+### Factory decorators
+
+Factory decorators are a way to customize how the decorator is applied to a declaration.
+
+**Documentation**: [typescriptlang.org](https://www.typescriptlang.org/docs/handbook/decorators.html#decorator-factories)
+
+### Validators
+
+Decorators can be used to validate data too. Have a look to the [working example](./examples/9-decorators/9-validation-with-decorators.ts).
+
+Available class validators: [typestack/class-validator](https://github.com/typestack/class-validator#table-of-contents)
