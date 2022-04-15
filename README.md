@@ -25,8 +25,8 @@ TypeScript tutorials, self-taught learning, ...
         - [1.10.3. Keywords](#1103-keywords)
         - [1.10.4. Interfaces](#1104-interfaces)
             - [1.10.4.1. Why](#11041-why)
-    - [Generics](#generics)
-        - [Constraints](#constraints)
+    - [1.11. Generics](#111-generics)
+        - [1.11.1. Constraints](#1111-constraints)
 
 <!-- /TOC -->
 
@@ -252,7 +252,7 @@ Using union types or arbitrary types are not a valid use-case for interfaces.
 
 We want to insure that a class has a set of methods and we want TypeScript to check methods existence.
 
-## Generics
+## 1.11. Generics
 
 > Generics are a fundamental feature of statically-typed languages, allowing developers to pass types as parameters to another type, function, or other structure. When a developer makes their component a generic component, they give that component the ability to accept and enforce typing that is passed in when the component is used, which improves code flexibility, makes components reusable, and removes duplication.
 
@@ -262,7 +262,7 @@ The Generics allow to inform TypeScript about the type of a property to complete
 
 Utility types documentation: [https://www.typescriptlang.org/docs/handbook/utility-types.html](https://www.typescriptlang.org/docs/handbook/utility-types.html)
 
-### Constraints
+### 1.11.1. Constraints
 
 While being flexible, Generics could also integrates Javascript silent errors and generate unexpected behavior.
 Check the [working Generics constraints example](./examples/8-generics/3-working-with-constraints.ts)
