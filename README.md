@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://www.typescriptlang.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" width="120" alt="TypeScript Logo" /></a>
+</p>
+
 TypeScript tutorials, self-taught learning, ... Starting from the bottom, now you're here.
 
 <p align="center">
