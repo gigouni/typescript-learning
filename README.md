@@ -327,7 +327,7 @@ More builds steeps can be added easily
 For a new Node.js project using TypeScript and Webpack, install the following modules
 
 ```shell
-`npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader clean-webpack-plugin
+npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader clean-webpack-plugin
 ```
 
 In the `tsconfig.json`

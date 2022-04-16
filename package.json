@@ -1,17 +1,29 @@
 {
-  "name": "3-datatypes",
+  "name": "typescript-learning",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Typescript tutorials, self-taught learning, ...",
+  "main": "dist/app.js",
   "scripts": {
     "start": "lite-server",
     "compile:watch": "tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "webpack:start": "webpack-dev-server",
+    "webpack:build": "webpack",
+    "webpack:build:prod": "webpack --config webpack.config.prod.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.146",
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "class-transformer": "^0.2.3",
+    "lodash": "^4.17.15",
+    "reflect-metadata": "^0.1.13",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
