@@ -30,6 +30,11 @@ TypeScript tutorials, self-taught learning, ...
     - [1.12. Decorators](#112-decorators)
         - [1.12.1. Factory decorators](#1121-factory-decorators)
         - [1.12.2. Validators](#1122-validators)
+    - [1.13. Webpack](#113-webpack)
+        - [1.13.1. Why](#1131-why)
+            - [1.13.1.1. "Normal" setup](#11311-normal-setup)
+            - [1.13.1.2. With Webpack](#11312-with-webpack)
+        - [1.13.2. Dependencies and settings](#1132-dependencies-and-settings)
 
 <!-- /TOC -->
 
@@ -287,3 +292,70 @@ Factory decorators are a way to customize how the decorator is applied to a decl
 Decorators can be used to validate data too. Have a look to the [working example](./examples/9-decorators/9-validation-with-decorators.ts).
 
 Available class validators: [typestack/class-validator](https://github.com/typestack/class-validator#table-of-contents)
+
+## 1.13. Webpack
+
+Webpack is a static module bundler for Javascript applications. It builds a dependency graph which maps every module the project needs and generates one ore more bundles.
+
+**Documentation**: [Webpack concepts](https://webpack.js.org/concepts/)
+
+### 1.13.1. Why
+
+#### 1.13.1.1. "Normal" setup
+
+- Multiple .ts files and imports thru HTTP requests
+- Unoptimized code (not as small as possible)
+- "External" development server needed (lite-server to reload our website whenever we perform a change)
+
+#### 1.13.1.2. With Webpack
+
+- Code bundles, less imports required
+Optimized (minified) code, less code to download
+More builds steeps can be added easily
+
+### 1.13.2. Dependencies and settings
+
+For a new Node.js project using TypeScript and Webpack, install the following modules
+
+```shell
+`npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader clean-webpack-plugin
+```
+
+In the `tsconfig.json`
+
+- `compilerOptions.target`: "es5" or "es6"
+- `compilerOptions.module`: "es2015" or "es6"
+- `compilerOptions.outDir`: "./dist"
+- `compilerOptions.sourceMap`: "true"
+
+Add a `webpack.config.js` file to the [root of the project](./webpack.config.js).
+It will be the **development** config file.
+
+In the code files, do not precise the import files extension aka `.js`
+
+In the `index.html`, change
+
+```html
+<script src="dist/app.js" defer></script>
+```
+
+to
+
+```html
+<script src="dist/bundle.js" defer></script>
+```
+
+In the `package.json`, update the scripts
+
+```json
+{
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "build:prod": "webpack --config webpack.config.prod.js"
+  }
+}
+```
+
+Add another `webpack.config.prod.js` file to the [root of the project](./webpack.config.prod.js).
+It will be the **production** config file.
