@@ -79,7 +79,7 @@ npm install -g typescript
 - Compile `*.ts` files with the command
 
 ```bash
-cd examples/2-typescript-basics
+cd examples/B-typescript-basics
 tsc using-ts.ts
 ```
 
@@ -273,7 +273,7 @@ Utility types documentation: [https://www.typescriptlang.org/docs/handbook/utili
 ### 1.11.1. Constraints
 
 While being flexible, Generics could also integrates Javascript silent errors and generate unexpected behavior.
-Check the [working Generics constraints example](./examples/8-generics/3-working-with-constraints.ts)
+Check the [working Generics constraints example](./examples/H-generics/C-working-with-constraints.ts)
 
 ## 1.12. Decorators
 
@@ -289,7 +289,7 @@ Factory decorators are a way to customize how the decorator is applied to a decl
 
 ### 1.12.2. Validators
 
-Decorators can be used to validate data too. Have a look to the [working example](./examples/9-decorators/9-validation-with-decorators.ts).
+Decorators can be used to validate data too. Have a look to the [working example](./examples/I-decorators/I-validation-with-decorators.ts).
 
 Available class validators: [typestack/class-validator](https://github.com/typestack/class-validator#table-of-contents)
 
