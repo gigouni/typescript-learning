@@ -1,40 +1,50 @@
-# 1. TypeScript Learning
+<p align="center">
+  <a href="https://www.typescriptlang.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" width="120" alt="TypeScript Logo" /></a>
+  <a href="https://www.udemy.com/course/understanding-typescript/" target="blank"><img src="https://logo-marque.com/wp-content/uploads/2021/11/Udemy-Logo-650x366.png" width="120" alt="Udemy Logo" /></a>
+</p>
 
-TypeScript tutorials, self-taught learning, ...
+TypeScript tutorials, self-taught learning, ... Starting from the bottom, now you're here.
+
+<p align="center">
+    <a href="#" target="_blank"><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" /></a>
+    <a href="#" target="_blank"><img src="https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white" alt="NPM" /></a>
+    <a href="#" target="_blank"><img src="https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black" alt="Webpack" /></a>
+    <a href="#" target="_blank"><img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="Visual Studio Code" /></a>
+    <a href="#" target="_blank"><img src="https://img.shields.io/badge/Udemy-A435F0?style=for-the-badge&logo=Udemy&logoColor=white" alt="Udemy" /></a>
+</p>
 
 <!-- TOC -->
 
-- [1. TypeScript Learning](#1-typescript-learning)
-    - [1.1. How to run examples](#11-how-to-run-examples)
-    - [1.2. What is TypeScript](#12-what-is-typescript)
-    - [1.3. Installing and using TypeScript](#13-installing-and-using-typescript)
-    - [1.4. IDE](#14-ide)
-    - [1.5. Lite-server](#15-lite-server)
-    - [1.6. Types](#16-types)
-        - [1.6.1. Core types](#161-core-types)
-        - [1.6.2. Type inference](#162-type-inference)
-    - [1.7. Troubleshooting data types](#17-troubleshooting-data-types)
-    - [1.8. Configuring the Typescript compiler](#18-configuring-the-typescript-compiler)
-        - [1.8.1. Watch](#181-watch)
-        - [1.8.2. Several files to watch/compile](#182-several-files-to-watchcompile)
-        - [1.8.3. Sourcemaps](#183-sourcemaps)
-    - [1.9. Next gen Javascript](#19-next-gen-javascript)
-    - [1.10. Classes and interfaces](#110-classes-and-interfaces)
-        - [1.10.1. Object-oriented Programming](#1101-object-oriented-programming)
-        - [1.10.2. Access modifiers](#1102-access-modifiers)
-        - [1.10.3. Keywords](#1103-keywords)
-        - [1.10.4. Interfaces](#1104-interfaces)
-            - [1.10.4.1. Why](#11041-why)
-    - [1.11. Generics](#111-generics)
-        - [1.11.1. Constraints](#1111-constraints)
-    - [1.12. Decorators](#112-decorators)
-        - [1.12.1. Factory decorators](#1121-factory-decorators)
-        - [1.12.2. Validators](#1122-validators)
-    - [1.13. Webpack](#113-webpack)
-        - [1.13.1. Why](#1131-why)
-            - [1.13.1.1. "Normal" setup](#11311-normal-setup)
-            - [1.13.1.2. With Webpack](#11312-with-webpack)
-        - [1.13.2. Dependencies and settings](#1132-dependencies-and-settings)
+- [1.1. How to run examples](#11-how-to-run-examples)
+- [1.2. What is TypeScript](#12-what-is-typescript)
+- [1.3. Installing and using TypeScript](#13-installing-and-using-typescript)
+- [1.4. IDE](#14-ide)
+- [1.5. Lite-server](#15-lite-server)
+- [1.6. Types](#16-types)
+    - [1.6.1. Core types](#161-core-types)
+    - [1.6.2. Type inference](#162-type-inference)
+- [1.7. Troubleshooting data types](#17-troubleshooting-data-types)
+- [1.8. Configuring the Typescript compiler](#18-configuring-the-typescript-compiler)
+    - [1.8.1. Watch](#181-watch)
+    - [1.8.2. Several files to watch/compile](#182-several-files-to-watchcompile)
+    - [1.8.3. Sourcemaps](#183-sourcemaps)
+- [1.9. Next gen Javascript](#19-next-gen-javascript)
+- [1.10. Classes and interfaces](#110-classes-and-interfaces)
+    - [1.10.1. Object-oriented Programming](#1101-object-oriented-programming)
+    - [1.10.2. Access modifiers](#1102-access-modifiers)
+    - [1.10.3. Keywords](#1103-keywords)
+    - [1.10.4. Interfaces](#1104-interfaces)
+        - [1.10.4.1. Why](#11041-why)
+- [1.11. Generics](#111-generics)
+    - [1.11.1. Constraints](#1111-constraints)
+- [1.12. Decorators](#112-decorators)
+    - [1.12.1. Factory decorators](#1121-factory-decorators)
+    - [1.12.2. Validators](#1122-validators)
+- [1.13. Webpack](#113-webpack)
+    - [1.13.1. Why](#1131-why)
+        - [1.13.1.1. "Normal" setup](#11311-normal-setup)
+        - [1.13.1.2. With Webpack](#11312-with-webpack)
+    - [1.13.2. Dependencies and settings](#1132-dependencies-and-settings)
 
 <!-- /TOC -->
 
