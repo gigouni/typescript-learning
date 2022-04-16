@@ -1,8 +1,3 @@
-<p align="center">
-  <a href="https://www.typescriptlang.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" width="120" alt="TypeScript Logo" /></a>
-  <a href="https://www.udemy.com/course/understanding-typescript/" target="blank"><img src="https://logo-marque.com/wp-content/uploads/2021/11/Udemy-Logo-650x366.png" width="120" alt="Udemy Logo" /></a>
-</p>
-
 TypeScript tutorials, self-taught learning, ... Starting from the bottom, now you're here.
 
 <p align="center">
